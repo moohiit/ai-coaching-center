@@ -5,7 +5,6 @@ export const CreateUser = mutation({
     args:{
         name:v.string(),
         email:v.string(),
-        tableName:v.string(),
     },
     handler: async (ctx, args)=>{
         //if user already exist
@@ -22,8 +21,8 @@ export const CreateUser = mutation({
             const result = await ctx.db.insert('users',{
                 ...data
             });
-            console.log("User Data:",result )
-            return data;
+            // console.log("User Data:",result )
+            return result;
         }
         return userData[0];
     }

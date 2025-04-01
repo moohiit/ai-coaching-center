@@ -8,7 +8,7 @@ function AuthProvider({children}){
     const user = useUser();
     const CreateUser = useMutation(api.users.CreateUser);
     useEffect(()=>{
-        console.log(user);
+        console.log("UserData from Stack auth Api:",user);
         user && CreateNewUser();
     },[user]);
     const CreateNewUser = async ()=>{
@@ -16,7 +16,7 @@ function AuthProvider({children}){
             name:user?.displayName,
             email:user?.primaryEmail
         })
-        console.log(result);
+        console.log("Convex user created Data: ",result);
     }
     return (
         <div>{children}</div>
