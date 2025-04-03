@@ -1,2 +1,3 @@
-// start video at 52 min 
-// link: https://www.youtube.com/watch?v=oE7bVYRFYrU
+import { createContext } from "react";
+
+export const UserContext  = createContext();
