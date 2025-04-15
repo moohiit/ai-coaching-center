@@ -1,12 +1,14 @@
 import React from 'react'
 import AppHeader from './_components/AppHeader'
 
-function DashboardLayout({children}) {
+function DashboardLayout({ children }) {
   return (
     <div>
-      <AppHeader/>
-      {children}
+      <AppHeader />
+      <div className='p-10 mt-14 md:px-20 xl:px-56 2xl:px-72'>
+        {children}
       </div>
+    </div>
   )
 }
 

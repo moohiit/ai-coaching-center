@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
       >
         <StackProvider app={stackServerApp}>
           <StackTheme>
-            <Provider> {children} </Provider>
+            <Provider>
+              {children} 
+            </Provider>
           </StackTheme>
         </StackProvider>
       </body>
